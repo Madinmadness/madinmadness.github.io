@@ -6,11 +6,11 @@
   <meta name="description" content="Portfolio of Mad — freelance cybersecurity professional">
   <!--
     SEGURANÇA: o GitHub Pages não deixa configurar cabeçalhos, então a política
-    de segurança (CSP) vai aqui. Ela só permite scripts deste próprio site,
-    estilos daqui + Google Fonts, e imagens daqui. Se um dia adicionar algo
-    de outro site (ex.: um vídeo do YouTube), precisa liberar aqui também.
+    de segurança (CSP) vai aqui. Ela só permite scripts, estilos, fontes e
+    imagens deste próprio site — nada de outros sites. Se um dia adicionar
+    algo de fora (ex.: um vídeo do YouTube), precisa liberar aqui também.
   -->
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
   <meta name="referrer" content="strict-origin-when-cross-origin">
   <title>Mad | Portfolio</title>
 
@@ -22,9 +22,9 @@
   <meta property="og:image" content="https://madinmadness.github.io/avatar.webp">
   <meta name="twitter:card" content="summary">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🪷</text></svg>">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+  <!-- as fontes principais já começam a baixar junto com a página -->
+  <link rel="preload" href="fonts/fredoka-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/nunito-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -105,12 +105,12 @@
         <div class="about-text card reveal">
           <p data-i18n="about.p1">
             I'm Mad, a <strong>freelance cybersecurity professional</strong> who also
-            enjoys <strong>development</strong>. I love understanding how things
+            <strong>builds websites</strong>. I love understanding how things
             work on the inside — and how they can break!
           </p>
           <p data-i18n="about.p2">
-            I'm currently studying bug bounty, Python automation and
-            cloud infrastructure. 🌷
+            Right now I'm leveling up in bug bounty and taking my first steps
+            in back-end development with Python. 🌷
           </p>
         </div>
         <ul class="about-stats">
@@ -129,24 +129,23 @@
           <div class="skill-icon">🛡️</div>
           <h3 data-i18n="skills.security">Security</h3>
           <ul class="chips">
-            <li>Web Pentest</li><li>OWASP Top 10</li><li>Burp Suite</li>
-            <li>Nmap</li><li>Bug Bounty</li>
+            <li>Bug Bounty</li><li data-i18n="skills.websec">Web Security</li>
+            <li>Recon</li><li data-i18n="skills.reports">Vulnerability Reports</li>
           </ul>
         </article>
         <article class="card skill lilac reveal">
-          <div class="skill-icon">💻</div>
-          <h3 data-i18n="skills.dev">Development</h3>
+          <div class="skill-icon">🎨</div>
+          <h3>Front-end</h3>
           <ul class="chips">
-            <li>Python</li><li>JavaScript</li><li>HTML/CSS</li>
-            <li>SQL</li><li>Git</li>
+            <li>HTML</li><li>CSS</li><li>JavaScript</li>
+            <li data-i18n="skills.responsive">Responsive Design</li>
           </ul>
         </article>
         <article class="card skill mint reveal">
-          <div class="skill-icon">⚙️</div>
-          <h3 data-i18n="skills.infra">Infrastructure</h3>
+          <div class="skill-icon">🐍</div>
+          <h3>Back-end <span class="badge" data-i18n="skills.beginner">beginner</span></h3>
           <ul class="chips">
-            <li>Linux</li><li data-i18n="skills.networks">TCP/IP Networking</li><li>Docker</li>
-            <li>AWS</li><li>Windows Server</li>
+            <li>Python</li><li data-i18n="skills.learning">Learning every day 🌱</li>
           </ul>
         </article>
       </div>
@@ -178,6 +177,14 @@
           <p data-i18n="p3.desc">Reports with clear reproduction steps, proof of concept, impact and fix suggestions — always following responsible disclosure.</p>
           <ul class="tech"><li>PoC</li><li>CVSS</li><li>Disclosure</li></ul>
         </article>
+
+        <article class="card project reveal">
+          <div class="project-emoji">🪷</div>
+          <h3 data-i18n="p4.title">This Portfolio</h3>
+          <p data-i18n="p4.desc">Built with HTML, CSS and JavaScript — responsive, in 3 languages, with dark mode and a security policy (CSP).</p>
+          <ul class="tech"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
+          <a class="project-link" href="https://github.com/Madinmadness/madinmadness.github.io" target="_blank" rel="noopener" data-i18n="p4.link">View code →</a>
+        </article>
       </div>
     </section>
 
@@ -188,7 +195,7 @@
         <li class="reveal">
           <span class="period" data-i18n="exp.1.period">2025 — present</span>
           <h3 data-i18n="exp.1.title">Freelance Cybersecurity Professional</h3>
-          <p data-i18n="exp.1.desc">Independent work on web application security testing, vulnerability assessment and bug bounty programs.</p>
+          <p data-i18n="exp.1.desc">Independent work on bug bounty programs, web application security testing and building websites.</p>
         </li>
         <li class="reveal">
           <span class="period" data-i18n="exp.2.period">Education</span>
