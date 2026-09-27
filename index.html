@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio of Mad — freelance cybersecurity professional">
+  <title>Mad | Portfolio</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🪷</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Lagoa no fundo: bolhas de água e vitórias-régias (criadas pelo JS) -->
+  <div class="bubbles" aria-hidden="true"></div>
+  <div class="pond" aria-hidden="true"></div>
+
+  <!--
+    TRADUÇÃO: todo elemento com data-i18n="chave" tem seu texto trocado pelo JS.
+    Os textos em inglês e português ficam no começo do script.js.
+  -->
+
+  <!-- ===== CABEÇALHO / MENU ===== -->
+  <header class="header">
+    <nav class="nav container">
+      <a href="#inicio" class="logo">🪷 mad</a>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#sobre" data-i18n="nav.about">About</a></li>
+        <li><a href="#habilidades" data-i18n="nav.skills">Skills</a></li>
+        <li><a href="#projetos" data-i18n="nav.projects">Projects</a></li>
+        <li><a href="#experiencia" data-i18n="nav.experience">Experience</a></li>
+        <li><a href="#contato" class="btn btn-small" data-i18n="nav.contact">Contact 💌</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <div class="lang">
+          <button class="lang-btn" id="lang-btn" aria-label="Language / Idioma" aria-haspopup="true" aria-expanded="false">🌐 EN</button>
+          <ul class="lang-menu" id="lang-menu">
+            <li><button data-lang="en">English</button></li>
+            <li><button data-lang="pt">Português</button></li>
+            <li><button data-lang="es">Español</button></li>
+          </ul>
+        </div>
+        <button class="theme-btn" id="theme-btn" aria-label="Toggle theme">🌙</button>
+        <button class="menu-btn" id="menu-btn" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ===== INÍCIO ===== -->
+    <section id="inicio" class="hero container">
+      <div class="hero-text">
+        <p class="hello" data-i18n="hero.hello">Hiii! 👋 I'm</p>
+        <h1>Mad</h1>
+        <h2>
+          <span class="typing" id="typing"></span><span class="caret">|</span>
+        </h2>
+        <p class="hero-desc" data-i18n="hero.desc">
+          Passionate about technology, information security and building
+          little things that solve real problems ✨
+        </p>
+        <div class="hero-buttons">
+          <a href="#projetos" class="btn" data-i18n="hero.projects">See projects 🚀</a>
+          <a href="#contato" class="btn btn-outline" data-i18n="hero.contact">Contact me 💌</a>
+        </div>
+      </div>
+
+      <div class="hero-art">
+        <div class="blob">
+          <img src="avatar.webp" alt="Mad's avatar" class="avatar-img">
+        </div>
+        <span class="float-emoji e1">🪷</span>
+        <span class="float-emoji e2">🐸</span>
+        <span class="float-emoji e3">🔐</span>
+        <span class="float-emoji e4">💧</span>
+      </div>
+    </section>
+
+    <!-- ===== SOBRE ===== -->
+    <section id="sobre" class="section container">
+      <h2 class="section-title reveal"><span data-i18n="about.title">About me</span> <span>🐣</span></h2>
+      <div class="about">
+        <div class="about-text card reveal">
+          <p data-i18n="about.p1">
+            I'm Mad, a <strong>freelance cybersecurity professional</strong> who also
+            enjoys <strong>development</strong>. I love understanding how things
+            work on the inside — and how they can break!
+          </p>
+          <p data-i18n="about.p2">
+            I'm currently studying bug bounty, Python automation and
+            cloud infrastructure. Write a little about your journey,
+            education and dreams here. 🌷
+          </p>
+        </div>
+        <ul class="about-stats">
+          <li class="stat reveal"><strong data-count="1" class="no-plus">0</strong><span data-i18n="about.years">year in cybersec</span></li>
+          <li class="stat reveal"><strong data-count="20">0</strong><span data-i18n="about.projects">programs tested</span></li>
+          <li class="stat reveal"><strong data-count="1" class="no-plus">0</strong><span data-i18n="about.certs">IT degree</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== HABILIDADES ===== -->
+    <section id="habilidades" class="section container">
+      <h2 class="section-title reveal"><span data-i18n="skills.title">Skills</span> <span>🧁</span></h2>
+      <div class="skills-grid">
+        <article class="card skill pink reveal">
+          <div class="skill-icon">🛡️</div>
+          <h3 data-i18n="skills.security">Security</h3>
+          <ul class="chips">
+            <li>Web Pentest</li><li>OWASP Top 10</li><li>Burp Suite</li>
+            <li>Nmap</li><li>Bug Bounty</li>
+          </ul>
+        </article>
+        <article class="card skill lilac reveal">
+          <div class="skill-icon">💻</div>
+          <h3 data-i18n="skills.dev">Development</h3>
+          <ul class="chips">
+            <li>Python</li><li>JavaScript</li><li>HTML/CSS</li>
+            <li>SQL</li><li>Git</li>
+          </ul>
+        </article>
+        <article class="card skill mint reveal">
+          <div class="skill-icon">⚙️</div>
+          <h3 data-i18n="skills.infra">Infrastructure</h3>
+          <ul class="chips">
+            <li>Linux</li><li data-i18n="skills.networks">TCP/IP Networking</li><li>Docker</li>
+            <li>AWS</li><li>Windows Server</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===== PROJETOS ===== -->
+    <section id="projetos" class="section container">
+      <h2 class="section-title reveal"><span data-i18n="projects.title">Projects</span> <span>🎀</span></h2>
+
+      <div class="projects-grid">
+        <article class="card project reveal">
+          <div class="project-emoji">🐞</div>
+          <h3 data-i18n="p1.title">Bug Bounty Hunting</h3>
+          <p data-i18n="p1.desc">Hunting vulnerabilities on HackerOne across 20+ programs — SaaS, e-commerce, travel, fintech and crypto.</p>
+          <ul class="tech"><li>Web</li><li>API</li><li>HackerOne</li></ul>
+          <a class="project-link" href="https://hackerone.com/madinmadness" target="_blank" rel="noopener" data-i18n="p1.link">View profile →</a>
+        </article>
+
+        <article class="card project reveal">
+          <div class="project-emoji">🗺️</div>
+          <h3 data-i18n="p2.title">Recon &amp; Attack Surface</h3>
+          <p data-i18n="p2.desc">Mapping subdomains, endpoints and hidden features before testing, with organized notes for every target.</p>
+          <ul class="tech"><li>Recon</li><li>OSINT</li><li data-i18n="p2.tag">Automation</li></ul>
+        </article>
+
+        <article class="card project reveal">
+          <div class="project-emoji">📝</div>
+          <h3 data-i18n="p3.title">Vulnerability Reports</h3>
+          <p data-i18n="p3.desc">Reports with clear reproduction steps, proof of concept, impact and fix suggestions — always following responsible disclosure.</p>
+          <ul class="tech"><li>PoC</li><li>CVSS</li><li>Disclosure</li></ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===== EXPERIÊNCIA / FORMAÇÃO ===== -->
+    <section id="experiencia" class="section container">
+      <h2 class="section-title reveal"><span data-i18n="exp.title">Experience &amp; Education</span> <span>🌈</span></h2>
+      <ol class="timeline">
+        <li class="reveal">
+          <span class="period" data-i18n="exp.1.period">2025 — present</span>
+          <h3 data-i18n="exp.1.title">Freelance Cybersecurity Professional</h3>
+          <p data-i18n="exp.1.desc">Independent work on web application security testing, vulnerability assessment and bug bounty programs.</p>
+        </li>
+        <li class="reveal">
+          <span class="period" data-i18n="exp.2.period">Education</span>
+          <h3 data-i18n="exp.2.title">Degree in Information Technology</h3>
+          <p data-i18n="exp.2.desc">A solid foundation in networks, systems and programming.</p>
+        </li>
+        <li class="reveal">
+          <span class="period" data-i18n="exp.3.period">Courses</span>
+          <h3 data-i18n="exp.3.title">Udemy Courses</h3>
+          <p data-i18n="exp.3.desc">Continuous learning in cybersecurity and ethical hacking.</p>
+        </li>
+      </ol>
+    </section>
+
+    <!-- ===== CONTATO ===== -->
+    <section id="contato" class="section container">
+      <div class="contact card reveal">
+        <h2 class="section-title"><span data-i18n="contact.title">Let's talk?</span> <span>💌</span></h2>
+        <p data-i18n="contact.desc">I'm open to new opportunities and collaborations. Say hi!</p>
+        <div class="contact-buttons">
+          <a href="mailto:madinmadness@wearehackerone.com" class="btn btn-big" data-i18n="contact.send">Send e-mail</a>
+          <button class="btn btn-outline btn-big" id="copy-email" data-email="madinmadness@wearehackerone.com" data-i18n="contact.copy">Copy e-mail 📋</button>
+        </div>
+        <ul class="socials">
+          <li><a href="https://github.com/Madinmadness" target="_blank" rel="noopener">🐙 GitHub</a></li>
+          <li><a href="https://hackerone.com/madinmadness" target="_blank" rel="noopener">🐞 HackerOne</a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p><span data-i18n="footer.made">Made with 💖 by</span> <strong>Mad</strong> · <span id="year"></span></p>
+  </footer>
+
+  <button class="to-top" id="to-top" aria-label="Back to top">⬆️</button>
+  <div class="toast" id="toast" role="status"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
