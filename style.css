@@ -292,14 +292,16 @@ h1, h2, h3 {
   border-radius: 20px;
   box-shadow: var(--shadow);
   opacity: 0;
+  visibility: hidden; /* fechado: some também pro teclado (Tab) */
   pointer-events: none;
   transform: translateY(-6px);
-  transition: opacity 0.2s, transform 0.2s;
+  transition: opacity 0.2s, transform 0.2s, visibility 0.2s;
   z-index: 30;
 }
 
 .lang-menu.open {
   opacity: 1;
+  visibility: visible;
   pointer-events: auto;
   transform: none;
 }
@@ -418,11 +420,6 @@ h1, h2, h3 {
 
 @keyframes sway {
   50% { transform: rotate(2deg) translateY(-4px); }
-}
-
-.avatar {
-  font-size: 8rem;
-  animation: bounce 3s ease-in-out infinite;
 }
 
 @keyframes morph {
@@ -589,40 +586,9 @@ h1, h2, h3 {
 }
 
 /* ===== PROJETOS ===== */
-.filters {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-bottom: 30px;
-}
-
-.filter {
-  padding: 8px 20px;
-  border-radius: 999px;
-  background: var(--bg-card);
-  font-family: var(--title);
-  font-weight: 500;
-  box-shadow: var(--shadow);
-  transition: background 0.2s, color 0.2s, transform 0.2s;
-}
-
-.filter:hover {
-  transform: translateY(-2px);
-}
-
-.filter.active {
-  background: var(--accent);
-  color: #fff;
-}
-
 .project {
   display: flex;
   flex-direction: column;
-}
-
-.project.hidden {
-  display: none;
 }
 
 .project-emoji {
@@ -823,7 +789,9 @@ h1, h2, h3 {
 }
 
 /* ===== ANIMAÇÃO AO ROLAR ===== */
-.reveal {
+/* só esconde quando o JS está rodando (classe .js no <html>);
+   sem JS o conteúdo aparece normal */
+.js .reveal {
   opacity: 0;
   transform: translateY(30px);
   transition: opacity 0.6s ease, transform 0.6s ease;
@@ -846,7 +814,7 @@ h1, h2, h3 {
     animation: none !important;
     transition: none !important;
   }
-  .reveal {
+  .js .reveal {
     opacity: 1;
     transform: none;
   }
@@ -877,10 +845,6 @@ h1, h2, h3 {
   .hero-art {
     order: -1;
     min-height: 280px;
-  }
-
-  .avatar {
-    font-size: 6rem;
   }
 
   .about-stats {
@@ -924,13 +888,15 @@ h1, h2, h3 {
     border-radius: var(--radius);
     box-shadow: var(--shadow);
     opacity: 0;
+    visibility: hidden; /* fechado: some também pro teclado (Tab) */
     pointer-events: none;
     transform: translateY(-10px);
-    transition: opacity 0.25s, transform 0.25s;
+    transition: opacity 0.25s, transform 0.25s, visibility 0.25s;
   }
 
   .nav-links.open {
     opacity: 1;
+    visibility: visible;
     pointer-events: auto;
     transform: none;
   }

@@ -1,4 +1,8 @@
-// ===== TEXTOS EM INGLÊS E PORTUGUÊS (edite aqui) =====
+// Avisa o CSS que o JS está rodando (as animações de "aparecer ao rolar"
+// só escondem o conteúdo quando o JS existe pra mostrar de volta)
+document.documentElement.classList.add("js");
+
+// ===== TEXTOS EM INGLÊS, PORTUGUÊS E ESPANHOL (edite aqui) =====
 // Cada chave é o valor do data-i18n no index.html
 const textos = {
   en: {
@@ -169,13 +173,19 @@ const idiomas = {
   es: { sigla: "ES", lang: "es", titulo: "Mad | Portafolio" },
 };
 
+// Só aceita "en", "pt" ou "es" (hasOwnProperty evita valores estranhos
+// como "constructor" ou "__proto__", que quebrariam o site)
+function idiomaValido(codigo) {
+  return typeof codigo === "string" && Object.prototype.hasOwnProperty.call(idiomas, codigo);
+}
+
 // Idioma do navegador do visitante: "pt-BR" → "pt", "es-AR" → "es"...
 // Se não for português nem espanhol, fica em inglês
 function idiomaDoNavegador() {
   const lista = navigator.languages || [navigator.language || "en"];
   for (const l of lista) {
     const codigo = l.toLowerCase().slice(0, 2);
-    if (textos[codigo]) return codigo;
+    if (idiomaValido(codigo)) return codigo;
   }
   return "en";
 }
@@ -185,7 +195,7 @@ let idioma = null;
 try {
   idioma = localStorage.getItem("idioma");
 } catch (e) {}
-if (!textos[idioma]) idioma = idiomaDoNavegador();
+if (!idiomaValido(idioma)) idioma = idiomaDoNavegador();
 
 const langBtn = document.getElementById("lang-btn");
 const langMenu = document.getElementById("lang-menu");
@@ -239,6 +249,19 @@ document.addEventListener("click", (e) => {
   if (!e.target.closest(".lang")) abrirMenuIdioma(false);
 });
 
+// Esc fecha os menus abertos (acessibilidade pra quem usa teclado)
+document.addEventListener("keydown", (e) => {
+  if (e.key !== "Escape") return;
+  if (langMenu.classList.contains("open")) {
+    abrirMenuIdioma(false);
+    langBtn.focus();
+  }
+  if (navLinks.classList.contains("open")) {
+    fecharMenuCelular();
+    menuBtn.focus();
+  }
+});
+
 // ===== EFEITO DE DIGITAÇÃO =====
 // (as frases ficam em textos.en.frases, textos.pt.frases e textos.es.frases, lá em cima)
 const typingEl = document.getElementById("typing");
@@ -248,7 +271,16 @@ let apagando = false;
 
 aplicarIdioma(idioma);
 
+// Quem pediu menos movimento no sistema vê a frase parada, sem digitação
+const menosMovimento = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
 function digitar() {
+  if (menosMovimento) {
+    typingEl.textContent = textos[idioma].frases[0];
+    setTimeout(digitar, 500); // acompanha se trocar de idioma
+    return;
+  }
+
   const frases = textos[idioma].frases;
   const texto = frases[fraseAtual];
   // Array.from separa certo os emojis
@@ -285,7 +317,7 @@ try {
   temaSalvo = localStorage.getItem("tema");
 } catch (e) {}
 
-aplicarTema(temaSalvo || "dark");
+aplicarTema(temaSalvo === "light" ? "light" : "dark");
 
 themeBtn.addEventListener("click", () => {
   const novo = document.documentElement.getAttribute("data-theme") === "dark" ? "light" : "dark";
@@ -299,6 +331,12 @@ themeBtn.addEventListener("click", () => {
 const menuBtn = document.getElementById("menu-btn");
 const navLinks = document.getElementById("nav-links");
 
+function fecharMenuCelular() {
+  navLinks.classList.remove("open");
+  menuBtn.classList.remove("open");
+  menuBtn.setAttribute("aria-expanded", false);
+}
+
 menuBtn.addEventListener("click", () => {
   const aberto = navLinks.classList.toggle("open");
   menuBtn.classList.toggle("open", aberto);
@@ -307,11 +345,7 @@ menuBtn.addEventListener("click", () => {
 
 // Fecha o menu ao clicar em um link
 navLinks.querySelectorAll("a").forEach((link) => {
-  link.addEventListener("click", () => {
-    navLinks.classList.remove("open");
-    menuBtn.classList.remove("open");
-    menuBtn.setAttribute("aria-expanded", false);
-  });
+  link.addEventListener("click", fecharMenuCelular);
 });
 
 // ===== APARECER AO ROLAR + CONTADORES =====
@@ -370,6 +404,10 @@ const secaoObserver = new IntersectionObserver(
 );
 secoes.forEach((s) => secaoObserver.observe(s));
 
+// ===== E-MAIL (montado pelo JS pra robôs de spam não pegarem no HTML) =====
+const email = ["madinmadness", "wearehackerone.com"].join("@");
+document.getElementById("send-email").href = `mailto:${email}`;
+
 // ===== COPIAR E-MAIL =====
 const toast = document.getElementById("toast");
 let toastTimer;
@@ -381,8 +419,7 @@ function mostrarAviso(msg) {
   toastTimer = setTimeout(() => toast.classList.remove("show"), 2200);
 }
 
-document.getElementById("copy-email").addEventListener("click", async (e) => {
-  const email = e.currentTarget.dataset.email;
+document.getElementById("copy-email").addEventListener("click", async () => {
   try {
     await navigator.clipboard.writeText(email);
     mostrarAviso(textos[idioma]["contact.copied"]);
@@ -396,7 +433,7 @@ const toTop = document.getElementById("to-top");
 
 window.addEventListener("scroll", () => {
   toTop.classList.toggle("show", window.scrollY > 500);
-});
+}, { passive: true });
 
 toTop.addEventListener("click", () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
@@ -404,7 +441,6 @@ toTop.addEventListener("click", () => {
 
 // ===== SAPINHOS QUANDO CLICA =====
 const coisinhas = ["🐸", "🐸", "🐸", "🪷", "🍀"];
-const menosMovimento = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
 document.addEventListener("click", (e) => {
   if (menosMovimento) return;

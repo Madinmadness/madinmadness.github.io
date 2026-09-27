@@ -4,7 +4,23 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Portfolio of Mad — freelance cybersecurity professional">
+  <!--
+    SEGURANÇA: o GitHub Pages não deixa configurar cabeçalhos, então a política
+    de segurança (CSP) vai aqui. Ela só permite scripts deste próprio site,
+    estilos daqui + Google Fonts, e imagens daqui. Se um dia adicionar algo
+    de outro site (ex.: um vídeo do YouTube), precisa liberar aqui também.
+  -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
   <title>Mad | Portfolio</title>
+
+  <!-- Prévia bonita quando o link é compartilhado (Discord, WhatsApp, X...) -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://madinmadness.github.io/">
+  <meta property="og:title" content="Mad | Portfolio">
+  <meta property="og:description" content="Freelance cybersecurity professional — bug bounty, recon and vulnerability reports.">
+  <meta property="og:image" content="https://madinmadness.github.io/avatar.webp">
+  <meta name="twitter:card" content="summary">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🪷</text></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -59,7 +75,7 @@
         <p class="hello" data-i18n="hero.hello">Hiii! 👋 I'm</p>
         <h1>Mad</h1>
         <h2>
-          <span class="typing" id="typing"></span><span class="caret">|</span>
+          <span class="typing" id="typing">Security Analyst 🔐</span><span class="caret">|</span>
         </h2>
         <p class="hero-desc" data-i18n="hero.desc">
           Passionate about technology, information security and building
@@ -194,8 +210,9 @@
         <h2 class="section-title"><span data-i18n="contact.title">Let's talk?</span> <span>💌</span></h2>
         <p data-i18n="contact.desc">I'm open to new opportunities and collaborations. Say hi!</p>
         <div class="contact-buttons">
-          <a href="mailto:madinmadness@wearehackerone.com" class="btn btn-big" data-i18n="contact.send">Send e-mail</a>
-          <button class="btn btn-outline btn-big" id="copy-email" data-email="madinmadness@wearehackerone.com" data-i18n="contact.copy">Copy e-mail 📋</button>
+          <!-- o e-mail é montado pelo script.js (fica escondido de robôs de spam) -->
+          <a href="#contato" id="send-email" class="btn btn-big" data-i18n="contact.send">Send e-mail</a>
+          <button class="btn btn-outline btn-big" id="copy-email" data-i18n="contact.copy">Copy e-mail 📋</button>
         </div>
         <ul class="socials">
           <li><a href="https://github.com/Madinmadness" target="_blank" rel="noopener">🐙 GitHub</a></li>
