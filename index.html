@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Portfolio of Mad — freelance cybersecurity professional">
+  <meta name="description" content="Portfolio of Mad, freelance cybersecurity professional">
   <!--
     SEGURANÇA: o GitHub Pages não deixa configurar cabeçalhos, então a política
     de segurança (CSP) vai aqui. Ela só permite scripts, estilos, fontes e
-    imagens deste próprio site — nada de outros sites. Se um dia adicionar
+    imagens deste próprio site, nada de outros sites. Se um dia adicionar
     algo de fora (ex.: um vídeo do YouTube), precisa liberar aqui também.
   -->
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
@@ -18,7 +18,7 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://madinmadness.github.io/">
   <meta property="og:title" content="Mad | Portfolio">
-  <meta property="og:description" content="Freelance cybersecurity professional — bug bounty, recon and vulnerability reports.">
+  <meta property="og:description" content="Freelance cybersecurity professional: bug bounty, recon and vulnerability reports.">
   <meta property="og:image" content="https://madinmadness.github.io/avatar.webp">
   <meta name="twitter:card" content="summary">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🪷</text></svg>">
@@ -106,7 +106,7 @@
           <p data-i18n="about.p1">
             I'm Mad, a <strong>freelance cybersecurity professional</strong> who also
             <strong>builds websites</strong>. I love understanding how things
-            work on the inside — and how they can break!
+            work on the inside, and how they can break!
           </p>
           <p data-i18n="about.p2">
             Right now I'm leveling up in bug bounty and taking my first steps
@@ -159,7 +159,7 @@
         <article class="card project reveal">
           <div class="project-emoji">🐞</div>
           <h3 data-i18n="p1.title">Bug Bounty Hunting</h3>
-          <p data-i18n="p1.desc">Hunting vulnerabilities on HackerOne across 20+ programs — SaaS, e-commerce, travel, fintech and crypto.</p>
+          <p data-i18n="p1.desc">Hunting vulnerabilities on HackerOne across 20+ programs: SaaS, e-commerce, travel, fintech and crypto.</p>
           <ul class="tech"><li>Web</li><li>API</li><li>HackerOne</li></ul>
           <a class="project-link" href="https://hackerone.com/madinmadness" target="_blank" rel="noopener" data-i18n="p1.link">View profile →</a>
         </article>
@@ -174,14 +174,14 @@
         <article class="card project reveal">
           <div class="project-emoji">📝</div>
           <h3 data-i18n="p3.title">Vulnerability Reports</h3>
-          <p data-i18n="p3.desc">Reports with clear reproduction steps, proof of concept, impact and fix suggestions — always following responsible disclosure.</p>
+          <p data-i18n="p3.desc">Reports with clear reproduction steps, proof of concept, impact and fix suggestions, always following responsible disclosure.</p>
           <ul class="tech"><li>PoC</li><li>CVSS</li><li>Disclosure</li></ul>
         </article>
 
         <article class="card project reveal">
           <div class="project-emoji">🪷</div>
           <h3 data-i18n="p4.title">This Portfolio</h3>
-          <p data-i18n="p4.desc">Built with HTML, CSS and JavaScript — responsive, in 3 languages, with dark mode and a security policy (CSP).</p>
+          <p data-i18n="p4.desc">Built with HTML, CSS and JavaScript, responsive, in 3 languages, with dark mode and a security policy (CSP).</p>
           <ul class="tech"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
           <a class="project-link" href="https://github.com/Madinmadness/madinmadness.github.io" target="_blank" rel="noopener" data-i18n="p4.link">View code →</a>
         </article>
@@ -193,7 +193,7 @@
       <h2 class="section-title reveal"><span data-i18n="exp.title">Experience &amp; Education</span> <span>🌈</span></h2>
       <ol class="timeline">
         <li class="reveal">
-          <span class="period" data-i18n="exp.1.period">2025 — present</span>
+          <span class="period" data-i18n="exp.1.period">Since 2025</span>
           <h3 data-i18n="exp.1.title">Freelance Cybersecurity Professional</h3>
           <p data-i18n="exp.1.desc">Independent work on bug bounty programs, web application security testing and building websites.</p>
         </li>
@@ -234,6 +234,39 @@
 
   <button class="to-top" id="to-top" aria-label="Back to top">⬆️</button>
   <div class="toast" id="toast" role="status"></div>
+
+  <!-- ===== CHAT DA MAD =====
+       Bot com respostas prontas (sem IA externa, sem chamadas de rede) que tira
+       dúvidas básicas sobre o currículo da Mad. Os textos e as respostas ficam
+       no objeto "chatDados" no final do script.js. -->
+  <div class="chat" id="chat">
+    <button class="chat-toggle" id="chat-toggle" aria-label="Open chat" aria-expanded="false" aria-controls="chat-panel">
+      <span aria-hidden="true">🐸</span>
+      <span class="chat-toggle-dot" id="chat-dot" aria-hidden="true"></span>
+    </button>
+
+    <div class="chat-panel" id="chat-panel" role="dialog" aria-modal="false" aria-labelledby="chat-title" hidden>
+      <div class="chat-head">
+        <div class="chat-head-info">
+          <span class="chat-avatar" aria-hidden="true">🐸</span>
+          <div>
+            <strong id="chat-title">Mad bot</strong>
+            <span class="chat-status" id="chat-status"></span>
+          </div>
+        </div>
+        <button class="chat-close" id="chat-close" aria-label="Close chat">✕</button>
+      </div>
+
+      <div class="chat-body" id="chat-body" role="log" aria-live="polite"></div>
+
+      <div class="chat-chips" id="chat-chips"></div>
+
+      <form class="chat-form" id="chat-form">
+        <input class="chat-input" id="chat-input" type="text" autocomplete="off" maxlength="200" aria-label="Message">
+        <button class="chat-send" type="submit" aria-label="Send">➤</button>
+      </form>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>

@@ -16,7 +16,7 @@ const textos = {
     "hero.projects": "See projects 🚀",
     "hero.contact": "Contact me 💌",
     "about.title": "About me",
-    "about.p1": "I'm Mad, a <strong>freelance cybersecurity professional</strong> who also <strong>builds websites</strong>. I love understanding how things work on the inside — and how they can break!",
+    "about.p1": "I'm Mad, a <strong>freelance cybersecurity professional</strong> who also <strong>builds websites</strong>. I love understanding how things work on the inside, and how they can break!",
     "about.p2": "Right now I'm leveling up in bug bounty and taking my first steps in back-end development with Python. 🌷",
     "about.years": "year in cybersec",
     "about.projects": "programs tested",
@@ -30,18 +30,18 @@ const textos = {
     "skills.learning": "Learning every day 🌱",
     "projects.title": "Projects",
     "p1.title": "Bug Bounty Hunting",
-    "p1.desc": "Hunting vulnerabilities on HackerOne across 20+ programs — SaaS, e-commerce, travel, fintech and crypto.",
+    "p1.desc": "Hunting vulnerabilities on HackerOne across 20+ programs: SaaS, e-commerce, travel, fintech and crypto.",
     "p1.link": "View profile →",
     "p2.title": "Recon &amp; Attack Surface",
     "p2.desc": "Mapping subdomains, endpoints and hidden features before testing, with organized notes for every target.",
     "p2.tag": "Automation",
     "p3.title": "Vulnerability Reports",
-    "p3.desc": "Reports with clear reproduction steps, proof of concept, impact and fix suggestions — always following responsible disclosure.",
+    "p3.desc": "Reports with clear reproduction steps, proof of concept, impact and fix suggestions, always following responsible disclosure.",
     "p4.title": "This Portfolio",
-    "p4.desc": "Built with HTML, CSS and JavaScript — responsive, in 3 languages, with dark mode and a security policy (CSP).",
+    "p4.desc": "Built with HTML, CSS and JavaScript, responsive, in 3 languages, with dark mode and a security policy (CSP).",
     "p4.link": "View code →",
     "exp.title": "Experience &amp; Education",
-    "exp.1.period": "2025 — present",
+    "exp.1.period": "Since 2025",
     "exp.1.title": "Freelance Cybersecurity Professional",
     "exp.1.desc": "Independent work on bug bounty programs, web application security testing and building websites.",
     "exp.2.period": "Education",
@@ -74,7 +74,7 @@ const textos = {
     "hero.projects": "Ver projetos 🚀",
     "hero.contact": "Fale comigo 💌",
     "about.title": "Sobre mim",
-    "about.p1": "Sou a Mad, <strong>profissional autônoma de cibersegurança</strong> que também <strong>cria sites</strong>. Adoro entender como as coisas funcionam por dentro — e como elas podem quebrar!",
+    "about.p1": "Sou a Mad, <strong>profissional autônoma de cibersegurança</strong> que também <strong>cria sites</strong>. Adoro entender como as coisas funcionam por dentro, e como elas podem quebrar!",
     "about.p2": "No momento estou evoluindo no bug bounty e dando meus primeiros passos no back-end com Python. 🌷",
     "about.years": "ano na área",
     "about.projects": "programas testados",
@@ -88,18 +88,18 @@ const textos = {
     "skills.learning": "Aprendendo todo dia 🌱",
     "projects.title": "Projetos",
     "p1.title": "Caça a Bugs (Bug Bounty)",
-    "p1.desc": "Caçando vulnerabilidades no HackerOne em mais de 20 programas — SaaS, e-commerce, viagens, fintech e cripto.",
+    "p1.desc": "Caçando vulnerabilidades no HackerOne em mais de 20 programas: SaaS, e-commerce, viagens, fintech e cripto.",
     "p1.link": "Ver perfil →",
     "p2.title": "Recon &amp; Superfície de Ataque",
     "p2.desc": "Mapeamento de subdomínios, endpoints e funcionalidades escondidas antes dos testes, com anotações organizadas para cada alvo.",
     "p2.tag": "Automação",
     "p3.title": "Relatórios de Vulnerabilidade",
-    "p3.desc": "Relatórios com passos claros de reprodução, prova de conceito, impacto e sugestão de correção — sempre com divulgação responsável.",
+    "p3.desc": "Relatórios com passos claros de reprodução, prova de conceito, impacto e sugestão de correção, sempre com divulgação responsável.",
     "p4.title": "Este Portfólio",
-    "p4.desc": "Feito com HTML, CSS e JavaScript — responsivo, em 3 idiomas, com modo escuro e política de segurança (CSP).",
+    "p4.desc": "Feito com HTML, CSS e JavaScript, responsivo, em 3 idiomas, com modo escuro e política de segurança (CSP).",
     "p4.link": "Ver código →",
     "exp.title": "Experiência &amp; Formação",
-    "exp.1.period": "2025 — atual",
+    "exp.1.period": "Desde 2025",
     "exp.1.title": "Profissional Autônoma de Cibersegurança",
     "exp.1.desc": "Trabalho independente com programas de bug bounty, testes de segurança em aplicações web e criação de sites.",
     "exp.2.period": "Formação",
@@ -132,7 +132,7 @@ const textos = {
     "hero.projects": "Ver proyectos 🚀",
     "hero.contact": "Contáctame 💌",
     "about.title": "Sobre mí",
-    "about.p1": "Soy Mad, <strong>profesional independiente de ciberseguridad</strong> que también <strong>crea sitios web</strong>. ¡Me encanta entender cómo funcionan las cosas por dentro — y cómo pueden romperse!",
+    "about.p1": "Soy Mad, <strong>profesional independiente de ciberseguridad</strong> que también <strong>crea sitios web</strong>. ¡Me encanta entender cómo funcionan las cosas por dentro, y cómo pueden romperse!",
     "about.p2": "Ahora mismo estoy mejorando en bug bounty y dando mis primeros pasos en el back-end con Python. 🌷",
     "about.years": "año en el área",
     "about.projects": "programas probados",
@@ -146,18 +146,18 @@ const textos = {
     "skills.learning": "Aprendiendo cada día 🌱",
     "projects.title": "Proyectos",
     "p1.title": "Caza de Bugs (Bug Bounty)",
-    "p1.desc": "Cazando vulnerabilidades en HackerOne en más de 20 programas — SaaS, e-commerce, viajes, fintech y cripto.",
+    "p1.desc": "Cazando vulnerabilidades en HackerOne en más de 20 programas: SaaS, e-commerce, viajes, fintech y cripto.",
     "p1.link": "Ver perfil →",
     "p2.title": "Recon &amp; Superficie de Ataque",
     "p2.desc": "Mapeo de subdominios, endpoints y funcionalidades ocultas antes de las pruebas, con notas organizadas para cada objetivo.",
     "p2.tag": "Automatización",
     "p3.title": "Reportes de Vulnerabilidades",
-    "p3.desc": "Reportes con pasos claros de reproducción, prueba de concepto, impacto y sugerencias de corrección — siempre con divulgación responsable.",
+    "p3.desc": "Reportes con pasos claros de reproducción, prueba de concepto, impacto y sugerencias de corrección, siempre con divulgación responsable.",
     "p4.title": "Este Portafolio",
-    "p4.desc": "Hecho con HTML, CSS y JavaScript — responsive, en 3 idiomas, con modo oscuro y política de seguridad (CSP).",
+    "p4.desc": "Hecho con HTML, CSS y JavaScript, responsive, en 3 idiomas, con modo oscuro y política de seguridad (CSP).",
     "p4.link": "Ver código →",
     "exp.title": "Experiencia &amp; Formación",
-    "exp.1.period": "2025 — actualidad",
+    "exp.1.period": "Desde 2025",
     "exp.1.title": "Profesional Independiente de Ciberseguridad",
     "exp.1.desc": "Trabajo independiente en programas de bug bounty, pruebas de seguridad de aplicaciones web y creación de sitios web.",
     "exp.2.period": "Formación",
@@ -237,6 +237,9 @@ function aplicarIdioma(novo) {
   fraseAtual = 0;
   letra = 0;
   apagando = false;
+
+  // avisa o chat pra trocar de idioma também (só existe depois que o JS carrega tudo)
+  if (typeof window.atualizarChatIdioma === "function") window.atualizarChatIdioma();
 }
 
 function abrirMenuIdioma(abrir) {
@@ -459,6 +462,8 @@ const coisinhas = ["🐸", "🐸", "🐸", "🪷", "🍀"];
 
 document.addEventListener("click", (e) => {
   if (menosMovimento) return;
+  // não solta sapinhos ao usar o chat (senão fica poluído lá dentro)
+  if (e.target.closest(".chat")) return;
 
   for (let i = 0; i < 6; i++) {
     const el = document.createElement("span");
@@ -515,3 +520,287 @@ folhas.forEach(([x, y, tamanho], i) => {
 
 // ===== ANO NO RODAPÉ =====
 document.getElementById("year").textContent = new Date().getFullYear();
+
+// ===== CHAT DA MAD (bot com respostas prontas) =====
+// Não usa IA externa nem faz chamadas de rede: as respostas ficam todas aqui.
+// Cada "intent" tem palavras-chave (chaves) e uma resposta. A pergunta do
+// visitante é comparada com as chaves e a intent com mais acertos ganha.
+// Para EDITAR o que o bot responde, é só mexer nos textos abaixo. 💖
+const chatDados = {
+  pt: {
+    titulo: "Sapinho da Mad",
+    status: "quase sempre online 🌷",
+    placeholder: "Pergunta algo sobre a Mad...",
+    saudacao: "Oiii! 👋🐸 Que bom te ver por aqui! Pergunta o que quiser sobre a Mad: habilidades, experiência, projetos ou como falar com ela 🪷",
+    naoEntendi: "Hmm, não entendi bem essa 🐸💭 Tenta perguntar sobre as habilidades, o bug bounty, a experiência, a formação ou o contato da Mad! Ou fala direto com ela lá na seção de Contato 💌",
+    chips: ["Habilidades 🛡️", "Bug bounty 🐞", "Experiência 💼", "Contato 💌"],
+    intents: [
+      { chaves: ["habilidade", "habilidades", "skill", "skills", "sabe fazer", "o que faz", "o que ela faz", "tecnologia", "tecnologias", "stack", "ferramenta", "ferramentas", "domina", "conhece"],
+        resposta: "As habilidades dela 💪:\n🛡️ Segurança: bug bounty, segurança web, recon e relatórios de vulnerabilidade\n🎨 Front-end: HTML, CSS, JavaScript e design responsivo\n🐍 Back-end: Python (iniciante, aprendendo todo dia 🌱)" },
+      { chaves: ["bug bounty", "bounty", "hackerone", "hacker one", "h1", "seguranca", "security", "vulnerabilidade", "vulnerabilidades", "pentest", "recon", "xss", "exploit", "hacking", "hacker", "caca"],
+        resposta: "Na segurança a Mad caça vulnerabilidades no HackerOne 🐞 já mexeu em 20+ programas (SaaS, e-commerce, viagens, fintech e cripto). Faz recon, escreve relatórios com PoC e sempre segue divulgação responsável 📝 Perfil: hackerone.com/madinmadness" },
+      { chaves: ["site", "sites", "website", "front end", "frontend", "html", "css", "javascript", "js", "design", "web design", "criar site"],
+        resposta: "Sim! A Mad também cria sites 🎨 Esse portfólio aqui foi feito por ela com HTML, CSS e JavaScript, responsivo, em 3 idiomas, com modo escuro e política de segurança (CSP) 🪷" },
+      { chaves: ["python", "back end", "backend", "api"],
+        resposta: "No back-end ela tá começando com Python 🐍 é iniciante, mas aprende todo dia 🌱" },
+      { chaves: ["experiencia", "experience", "trabalho", "trabalha", "freelance", "freela", "carreira", "atua", "quanto tempo", "anos", "tempo", "emprego", "profissional"],
+        resposta: "A Mad trabalha como profissional autônoma de cibersegurança desde 2025 💼 faz bug bounty, testes de segurança em aplicações web e criação de sites, tudo de forma independente ✨" },
+      { chaves: ["formacao", "educacao", "education", "faculdade", "diploma", "curso", "cursos", "udemy", "estudo", "estudou", "graduacao", "academico", "certificacao", "certificado"],
+        resposta: "Formação 🎓 Diploma em Tecnologia da Informação (base sólida em redes, sistemas e programação) + cursos na Udemy de cibersegurança e hacking ético. Aprendizado sempre contínuo 📚" },
+      { chaves: ["contato", "contact", "email", "e mail", "falar", "fala com", "contrata", "contratar", "contratacao", "disponivel", "disponibilidade", "orcamento", "proposta", "mensagem", "chamar", "trabalhar com ela", "trabalhar juntos"],
+        resposta: "Quer falar com a Mad? 💌 O e-mail é madinmadness@wearehackerone.com. Ela também tá no GitHub (Madinmadness) e no HackerOne (madinmadness). Tá aberta a novas oportunidades e parcerias 🌷 É só rolar até a seção de Contato!" },
+      { chaves: ["que idioma", "quais idioma", "quais idiomas", "idiomas", "fala ingles", "fala espanhol", "fala portugues", "multilingue"],
+        resposta: "Este site tá em 3 idiomas: português, inglês e espanhol 🌐 É só usar o botãozinho 🌐 lá em cima pra trocar!" },
+      { chaves: ["projeto", "projetos", "portfolio", "trabalhos", "cases", "o que ja fez"],
+        resposta: "Dá uma olhada na seção de Projetos 🎀 tem o bug bounty no HackerOne, o trabalho de recon & superfície de ataque, os relatórios de vulnerabilidade e este próprio portfólio 🪷" },
+      { chaves: ["coca", "coca cola", "refrigerante", "hobby", "hobbies", "sapo", "sapinho", "frog", "ra", "lagoa", "cor favorita", "curiosidade", "fun fact", "gosta de"],
+        resposta: "Curiosidade fofa: a Mad é apaixonada por Coca-Cola 🥤 e ama tema de lagoa: sapinhos 🐸, vitórias-régias e flor de lótus 🪷 (dá pra notar, né? hihi)" },
+      { chaves: ["quem", "quem e a mad", "sobre a mad", "sobre voce", "sobre ti", "apresenta", "me conta", "fala da mad", "quem ela e", "historia"],
+        resposta: "A Mad é profissional autônoma de cibersegurança que também cria sites 💻🛡️ Ela ama entender como as coisas funcionam por dentro, e como elas podem quebrar! Tá evoluindo em bug bounty e dando os primeiros passos no back-end com Python 🐍🌷" },
+      { chaves: ["oi", "ola", "hello", "hi", "hey", "eae", "opa", "bom dia", "boa tarde", "boa noite", "tudo bem", "salve"],
+        resposta: "Oiii! 👋🐸 Que bom te ver! Pergunta o que quiser sobre a Mad: habilidades, experiência, projetos ou contato 🪷" },
+      { chaves: ["tchau", "adeus", "ate mais", "valeu", "obrigado", "obrigada", "brigado", "falou", "xau", "bye"],
+        resposta: "Fico feliz em ajudar! 🐸💖 Se quiser falar com a Mad de verdade, o contato tá logo ali 💌 Até mais! 🪷" },
+    ],
+  },
+  en: {
+    titulo: "Mad's frog bot",
+    status: "almost always online 🌷",
+    placeholder: "Ask me about Mad...",
+    saudacao: "Hiii! 👋🐸 So glad you're here! Ask me anything about Mad: her skills, experience, projects or how to reach her 🪷",
+    naoEntendi: "Hmm, I didn't quite get that 🐸💭 Try asking about Mad's skills, bug bounty, experience, education or contact! Or reach her directly in the Contact section 💌",
+    chips: ["Skills 🛡️", "Bug bounty 🐞", "Experience 💼", "Contact 💌"],
+    intents: [
+      { chaves: ["skill", "skills", "what can she do", "what does she do", "tech", "technology", "technologies", "stack", "tool", "tools", "knows", "good at", "abilities"],
+        resposta: "Her skills 💪:\n🛡️ Security: bug bounty, web security, recon and vulnerability reports\n🎨 Front-end: HTML, CSS, JavaScript and responsive design\n🐍 Back-end: Python (beginner, learning every day 🌱)" },
+      { chaves: ["bug bounty", "bounty", "hackerone", "hacker one", "h1", "security", "vulnerability", "vulnerabilities", "pentest", "recon", "xss", "exploit", "hacking", "hacker", "hunt"],
+        resposta: "On the security side, Mad hunts vulnerabilities on HackerOne 🐞 across 20+ programs (SaaS, e-commerce, travel, fintech and crypto). She does recon, writes reports with PoC and always follows responsible disclosure 📝 Profile: hackerone.com/madinmadness" },
+      { chaves: ["site", "sites", "website", "websites", "front end", "frontend", "html", "css", "javascript", "js", "design", "web design"],
+        resposta: "Yep! Mad builds websites too 🎨 This very portfolio was made by her with HTML, CSS and JavaScript, responsive, in 3 languages, with dark mode and a security policy (CSP) 🪷" },
+      { chaves: ["python", "back end", "backend", "api"],
+        resposta: "On the back-end she's starting out with Python 🐍 still a beginner, but learning every single day 🌱" },
+      { chaves: ["experience", "work", "works", "freelance", "career", "how long", "years", "time", "job", "professional"],
+        resposta: "Mad has worked as a freelance cybersecurity professional since 2025 💼 bug bounty, web app security testing and building websites, all independently ✨" },
+      { chaves: ["education", "study", "studied", "degree", "college", "university", "course", "courses", "udemy", "academic", "certification", "certificate"],
+        resposta: "Education 🎓 A degree in Information Technology (solid base in networks, systems and programming) + Udemy courses in cybersecurity and ethical hacking. Always learning 📚" },
+      { chaves: ["contact", "email", "e mail", "reach", "reach her", "hire", "hire her", "available", "availability", "quote", "proposal", "message", "talk to", "work with"],
+        resposta: "Want to reach Mad? 💌 Her e-mail is madinmadness@wearehackerone.com. She's also on GitHub (Madinmadness) and HackerOne (madinmadness). She's open to new opportunities and collaborations 🌷 Just scroll to the Contact section!" },
+      { chaves: ["what language", "which language", "languages spoken", "speak", "multilingual"],
+        resposta: "This site is available in 3 languages: English, Portuguese and Spanish 🌐 Use the little 🌐 button up top to switch!" },
+      { chaves: ["project", "projects", "portfolio", "cases", "what has she done", "work samples"],
+        resposta: "Check out the Projects section 🎀 there's the HackerOne bug bounty work, recon & attack surface, vulnerability reports and this very portfolio 🪷" },
+      { chaves: ["coca", "coca cola", "soda", "hobby", "hobbies", "frog", "frogs", "pond", "favorite color", "fun fact", "curiosity", "likes"],
+        resposta: "Cute fun fact: Mad loves Coca-Cola 🥤 and adores a pond theme: little frogs 🐸, lily pads and lotus flowers 🪷 (kinda obvious, huh? hihi)" },
+      { chaves: ["who", "who is mad", "about mad", "about her", "about you", "tell me about", "introduce", "her story"],
+        resposta: "Mad is a freelance cybersecurity professional who also builds websites 💻🛡️ She loves understanding how things work inside, and how they break! Right now she's leveling up in bug bounty and taking her first steps in back-end with Python 🐍🌷" },
+      { chaves: ["hi", "hello", "hey", "hiya", "good morning", "good afternoon", "good evening", "yo", "howdy", "sup"],
+        resposta: "Hiii! 👋🐸 So glad you're here! Ask me anything about Mad: her skills, experience, projects or contact 🪷" },
+      { chaves: ["bye", "goodbye", "see you", "thanks", "thank you", "cheers", "later"],
+        resposta: "Happy to help! 🐸💖 If you'd like to talk to Mad for real, the Contact section is right there 💌 See you! 🪷" },
+    ],
+  },
+  es: {
+    titulo: "Sapito de Mad",
+    status: "casi siempre en línea 🌷",
+    placeholder: "Pregúntame sobre Mad...",
+    saudacao: "¡Holaa! 👋🐸 ¡Qué bueno verte por aquí! Pregúntame lo que quieras sobre Mad: sus habilidades, experiencia, proyectos o cómo contactarla 🪷",
+    naoEntendi: "Mmm, no entendí bien eso 🐸💭 Prueba preguntando por las habilidades, el bug bounty, la experiencia, la formación o el contacto de Mad. ¡O escríbele directo en la sección de Contacto! 💌",
+    chips: ["Habilidades 🛡️", "Bug bounty 🐞", "Experiencia 💼", "Contacto 💌"],
+    intents: [
+      { chaves: ["habilidad", "habilidades", "skill", "skills", "que sabe hacer", "que hace", "tecnologia", "tecnologias", "stack", "herramienta", "herramientas", "domina", "conoce"],
+        resposta: "Sus habilidades 💪:\n🛡️ Seguridad: bug bounty, seguridad web, recon y reportes de vulnerabilidades\n🎨 Front-end: HTML, CSS, JavaScript y diseño responsive\n🐍 Back-end: Python (principiante, aprendiendo cada día 🌱)" },
+      { chaves: ["bug bounty", "bounty", "hackerone", "hacker one", "h1", "seguridad", "vulnerabilidad", "vulnerabilidades", "pentest", "recon", "xss", "exploit", "hacking", "hacker", "caza"],
+        resposta: "En seguridad, Mad caza vulnerabilidades en HackerOne 🐞 en más de 20 programas (SaaS, e-commerce, viajes, fintech y cripto). Hace recon, escribe reportes con PoC y siempre sigue la divulgación responsable 📝 Perfil: hackerone.com/madinmadness" },
+      { chaves: ["sitio", "sitios", "web", "website", "front end", "frontend", "html", "css", "javascript", "js", "diseno", "diseno web"],
+        resposta: "¡Sí! Mad también crea sitios web 🎨 Este mismo portafolio lo hizo ella con HTML, CSS y JavaScript, responsive, en 3 idiomas, con modo oscuro y política de seguridad (CSP) 🪷" },
+      { chaves: ["python", "back end", "backend", "api"],
+        resposta: "En el back-end está empezando con Python 🐍 aún es principiante, ¡pero aprende cada día 🌱!" },
+      { chaves: ["experiencia", "experience", "trabajo", "trabaja", "freelance", "carrera", "cuanto tiempo", "anos", "tiempo", "empleo", "profesional"],
+        resposta: "Mad trabaja como profesional independiente de ciberseguridad desde 2025 💼 bug bounty, pruebas de seguridad web y creación de sitios, todo de forma independiente ✨" },
+      { chaves: ["formacion", "educacion", "estudio", "estudia", "titulo", "universidad", "curso", "cursos", "udemy", "academico", "certificacion", "certificado"],
+        resposta: "Formación 🎓 Título en Tecnología de la Información (base sólida en redes, sistemas y programación) + cursos en Udemy de ciberseguridad y hacking ético. Siempre aprendiendo 📚" },
+      { chaves: ["contacto", "contact", "email", "e mail", "escribir", "contactar", "contrata", "contratar", "disponible", "disponibilidad", "presupuesto", "propuesta", "mensaje", "hablar con", "trabajar con"],
+        resposta: "¿Quieres contactar a Mad? 💌 Su e-mail es madinmadness@wearehackerone.com. También está en GitHub (Madinmadness) y HackerOne (madinmadness). Está abierta a nuevas oportunidades y colaboraciones 🌷 ¡Solo baja a la sección de Contacto!" },
+      { chaves: ["que idioma", "cuales idiomas", "idiomas", "habla ingles", "habla portugues", "multilingue"],
+        resposta: "Este sitio está en 3 idiomas: español, inglés y portugués 🌐 ¡Usa el botoncito 🌐 de arriba para cambiar!" },
+      { chaves: ["proyecto", "proyectos", "portafolio", "portfolio", "casos", "que ha hecho"],
+        resposta: "Echa un vistazo a la sección de Proyectos 🎀 está el bug bounty en HackerOne, el trabajo de recon y superficie de ataque, los reportes de vulnerabilidades y este mismo portafolio 🪷" },
+      { chaves: ["coca", "coca cola", "refresco", "hobby", "hobbies", "sapo", "sapito", "rana", "laguna", "color favorito", "dato curioso", "curiosidad", "le gusta"],
+        resposta: "Dato curioso: ¡a Mad le encanta la Coca-Cola 🥤 y ama el tema de laguna: sapitos 🐸, nenúfares y flor de loto 🪷 (bastante obvio, ¿no? jaja)" },
+      { chaves: ["quien", "quien es mad", "sobre mad", "sobre ella", "sobre ti", "cuentame", "presenta", "su historia"],
+        resposta: "Mad es profesional independiente de ciberseguridad que también crea sitios web 💻🛡️ ¡Le encanta entender cómo funcionan las cosas por dentro, y cómo se rompen! Ahora está mejorando en bug bounty y dando sus primeros pasos en el back-end con Python 🐍🌷" },
+      { chaves: ["hola", "holaa", "buenas", "buenos dias", "buenas tardes", "buenas noches", "que tal", "ey"],
+        resposta: "¡Holaa! 👋🐸 ¡Qué bueno verte! Pregúntame lo que quieras sobre Mad: habilidades, experiencia, proyectos o contacto 🪷" },
+      { chaves: ["adios", "chao", "chau", "hasta", "gracias", "hasta luego", "nos vemos"],
+        resposta: "¡Feliz de ayudar! 🐸💖 Si quieres hablar con Mad de verdad, la sección de Contacto está justo ahí 💌 ¡Hasta pronto! 🪷" },
+    ],
+  },
+};
+
+// Deixa o texto "cru": minúsculo, sem acento e com só um espaço entre palavras.
+// Ex.: "Quais são as HABILIDADES dela?" -> " quais sao as habilidades dela "
+function normalizar(texto) {
+  const limpo = texto
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[̀-ͯ]/g, "")
+    .replace(/[^a-z0-9]+/g, " ")
+    .trim();
+  return ` ${limpo} `;
+}
+
+// Pontua uma intent pelas palavras-chave que aparecem no texto. Cada acerto
+// vale o tamanho da palavra-chave, então termos mais específicos ("idiomas")
+// pesam mais que genéricos ("site") e ganham no caso de "empate".
+function pontuarIntent(texto, chaves) {
+  let pontos = 0;
+  for (const chave of chaves) {
+    if (texto.includes(` ${chave} `)) pontos += chave.length;
+  }
+  return pontos;
+}
+
+const chatToggle = document.getElementById("chat-toggle");
+const chatPanel = document.getElementById("chat-panel");
+const chatClose = document.getElementById("chat-close");
+const chatBody = document.getElementById("chat-body");
+const chatChips = document.getElementById("chat-chips");
+const chatForm = document.getElementById("chat-form");
+const chatInput = document.getElementById("chat-input");
+const chatTitulo = document.getElementById("chat-title");
+const chatStatus = document.getElementById("chat-status");
+const chatDot = document.getElementById("chat-dot");
+
+// Adiciona uma mensagem na conversa (quem = "bot" ou "user")
+function chatAddMsg(quem, texto) {
+  const linha = document.createElement("div");
+  linha.className = `chat-msg ${quem}`;
+
+  if (quem === "bot") {
+    const av = document.createElement("span");
+    av.className = "chat-msg-av";
+    av.textContent = "🐸";
+    linha.appendChild(av);
+  }
+
+  const balao = document.createElement("div");
+  balao.className = "chat-bubble";
+  balao.textContent = texto; // textContent: nada de HTML entra por aqui (seguro)
+  linha.appendChild(balao);
+
+  chatBody.appendChild(linha);
+  chatBody.scrollTop = chatBody.scrollHeight;
+  return linha;
+}
+
+// Balãozinho de "digitando..."
+function chatMostrarDigitando() {
+  const linha = document.createElement("div");
+  linha.className = "chat-msg bot";
+  const av = document.createElement("span");
+  av.className = "chat-msg-av";
+  av.textContent = "🐸";
+  const balao = document.createElement("div");
+  balao.className = "chat-bubble chat-typing";
+  balao.innerHTML = "<span></span><span></span><span></span>"; // marcação fixa, sem dados do visitante
+  linha.appendChild(av);
+  linha.appendChild(balao);
+  chatBody.appendChild(linha);
+  chatBody.scrollTop = chatBody.scrollHeight;
+  return linha;
+}
+
+// Descobre a melhor resposta e responde (com uma pausinha de "digitando")
+function chatResponder(pergunta) {
+  const dados = chatDados[idioma];
+  const texto = normalizar(pergunta);
+
+  let melhor = null;
+  let melhorPontos = 0;
+  for (const intent of dados.intents) {
+    const pontos = pontuarIntent(texto, intent.chaves);
+    if (pontos > melhorPontos) {
+      melhorPontos = pontos;
+      melhor = intent;
+    }
+  }
+
+  const resposta = melhor ? melhor.resposta : dados.naoEntendi;
+  const espera = menosMovimento ? 0 : 500 + Math.random() * 400;
+  const digitando = menosMovimento ? null : chatMostrarDigitando();
+
+  setTimeout(() => {
+    if (digitando) digitando.remove();
+    chatAddMsg("bot", resposta);
+  }, espera);
+}
+
+// Envia o que a pessoa escreveu (ou clicou num chip)
+function chatEnviar(texto) {
+  const msg = texto.trim();
+  if (!msg) return;
+  chatAddMsg("user", msg);
+  chatResponder(msg);
+}
+
+// Monta os botõezinhos de sugestão
+function chatRenderChips() {
+  chatChips.innerHTML = "";
+  for (const rotulo of chatDados[idioma].chips) {
+    const btn = document.createElement("button");
+    btn.type = "button";
+    btn.className = "chat-chip";
+    btn.textContent = rotulo;
+    btn.addEventListener("click", () => chatEnviar(rotulo));
+    chatChips.appendChild(btn);
+  }
+}
+
+// Abre / fecha o painel
+function chatAbrir(abrir) {
+  chatPanel.hidden = !abrir;
+  chatToggle.setAttribute("aria-expanded", abrir);
+  chatToggle.classList.toggle("open", abrir);
+
+  if (abrir) {
+    chatDot.remove(); // some com o pontinho de novidade depois do 1º clique
+    if (!chatBody.children.length) {
+      chatAddMsg("bot", chatDados[idioma].saudacao);
+    }
+    setTimeout(() => chatInput.focus(), 60);
+  }
+}
+
+// Troca o idioma do chat (chamado pelo aplicarIdioma lá em cima)
+window.atualizarChatIdioma = function () {
+  const dados = chatDados[idioma];
+  chatTitulo.textContent = dados.titulo;
+  chatStatus.textContent = dados.status;
+  chatInput.placeholder = dados.placeholder;
+  chatRenderChips();
+
+  // reinicia a conversa no idioma novo pra não misturar línguas
+  const estavaAberto = !chatPanel.hidden;
+  chatBody.innerHTML = "";
+  if (estavaAberto) chatAddMsg("bot", dados.saudacao);
+};
+
+chatToggle.addEventListener("click", () => chatAbrir(chatPanel.hidden));
+chatClose.addEventListener("click", () => chatAbrir(false));
+
+chatForm.addEventListener("submit", (e) => {
+  e.preventDefault(); // nunca envia pra lugar nenhum: tudo acontece aqui no navegador
+  chatEnviar(chatInput.value);
+  chatInput.value = "";
+});
+
+// Esc fecha o chat também
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape" && !chatPanel.hidden) {
+    chatAbrir(false);
+    chatToggle.focus();
+  }
+});
+
+// Deixa título, status, placeholder e chips prontos no idioma atual
+window.atualizarChatIdioma();

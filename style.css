@@ -812,6 +812,291 @@ h1, h2, h3 {
   transform: translateY(0);
 }
 
+/* ===== CHAT DA MAD (bot com respostas prontas, tudo no navegador) =====
+   Fica no canto inferior ESQUERDO pra não brigar com o botão "voltar ao topo",
+   que mora no canto direito. Usa as mesmas variáveis de cor, então já nasce
+   com tema claro/escuro de graça. */
+.chat {
+  position: fixed;
+  left: 20px;
+  bottom: 20px;
+  z-index: 40;
+}
+
+/* Botãozinho redondo que abre o chat */
+.chat-toggle {
+  position: relative;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 1.7rem;
+  background: linear-gradient(135deg, var(--accent), #a58bff);
+  box-shadow: var(--shadow);
+  transition: transform 0.2s;
+  animation: bob 4s ease-in-out infinite;
+}
+
+.chat-toggle:hover {
+  transform: scale(1.1) rotate(-6deg);
+}
+
+.chat-toggle.open {
+  animation: none;
+}
+
+/* pontinho de "tem novidade" que pulsa pra chamar o clique */
+.chat-toggle-dot {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: #ff5b8a;
+  border: 2px solid var(--bg-card);
+  animation: pulse 1.8s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.3); opacity: 0.6; }
+}
+
+/* Painel do chat, abre pra cima */
+.chat-panel {
+  position: absolute;
+  left: 0;
+  bottom: 72px;
+  width: min(340px, calc(100vw - 40px));
+  height: min(460px, calc(100vh - 120px));
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-card);
+  border-radius: 24px;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  transform-origin: bottom left;
+  animation: chat-in 0.28s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.chat-panel[hidden] {
+  display: none;
+}
+
+@keyframes chat-in {
+  from { opacity: 0; transform: translateY(14px) scale(0.94); }
+  to { opacity: 1; transform: none; }
+}
+
+/* Cabeçalho do painel */
+.chat-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 14px 16px;
+  background: linear-gradient(135deg, var(--pink), var(--lilac));
+}
+
+.chat-head-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.chat-avatar {
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  font-size: 1.4rem;
+  border-radius: 50%;
+  background: var(--bg-card);
+}
+
+.chat-head-info strong {
+  display: block;
+  font-family: var(--title);
+  font-size: 1.05rem;
+}
+
+.chat-status {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+.chat-close {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  font-size: 1rem;
+  background: rgba(255, 255, 255, 0.35);
+  transition: transform 0.2s;
+}
+
+.chat-close:hover {
+  transform: rotate(90deg);
+}
+
+/* Área das mensagens */
+.chat-body {
+  flex: 1;
+  overflow-y: auto;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  scrollbar-width: thin;
+}
+
+.chat-msg {
+  display: flex;
+  align-items: flex-end;
+  gap: 8px;
+  max-width: 90%;
+}
+
+.chat-msg.user {
+  align-self: flex-end;
+  flex-direction: row-reverse;
+}
+
+.chat-msg-av {
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  display: grid;
+  place-items: center;
+  font-size: 1rem;
+  border-radius: 50%;
+  background: var(--pink);
+}
+
+.chat-bubble {
+  padding: 10px 14px;
+  border-radius: 18px;
+  font-size: 0.92rem;
+  line-height: 1.5;
+  white-space: pre-wrap;   /* respeita as quebras de linha das respostas */
+  word-break: break-word;
+}
+
+.chat-msg.bot .chat-bubble {
+  background: var(--bg);
+  border-bottom-left-radius: 6px;
+}
+
+.chat-msg.user .chat-bubble {
+  background: var(--accent);
+  color: #fff;
+  border-bottom-right-radius: 6px;
+}
+
+/* "digitando..." (três pontinhos) */
+.chat-typing {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+
+.chat-typing span {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--text-muted);
+  animation: typing 1.2s ease-in-out infinite;
+}
+
+.chat-typing span:nth-child(2) { animation-delay: 0.2s; }
+.chat-typing span:nth-child(3) { animation-delay: 0.4s; }
+
+@keyframes typing {
+  0%, 60%, 100% { transform: translateY(0); opacity: 0.4; }
+  30% { transform: translateY(-5px); opacity: 1; }
+}
+
+/* Sugestões de pergunta (chips) */
+.chat-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding: 0 14px 10px;
+}
+
+.chat-chip {
+  padding: 6px 12px;
+  border-radius: 999px;
+  border: 2px dashed var(--pink);
+  background: var(--bg);
+  font-size: 0.8rem;
+  font-weight: 700;
+  transition: transform 0.2s, background 0.2s;
+}
+
+.chat-chip:hover {
+  transform: scale(1.05);
+  background: var(--pink);
+}
+
+/* Campo de escrever + enviar */
+.chat-form {
+  display: flex;
+  gap: 8px;
+  padding: 12px 14px;
+  border-top: 2px dashed var(--pink);
+}
+
+.chat-input {
+  flex: 1;
+  min-width: 0;
+  padding: 10px 14px;
+  border-radius: 999px;
+  border: 2px solid var(--pink);
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--body);
+  font-size: 0.9rem;
+}
+
+.chat-input:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+.chat-send {
+  flex-shrink: 0;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  font-size: 1.1rem;
+  color: #fff;
+  background: var(--accent);
+  box-shadow: 0 4px 0 var(--accent-dark);
+  transition: transform 0.15s;
+}
+
+.chat-send:hover {
+  transform: translateY(-2px);
+}
+
+.chat-send:active {
+  transform: translateY(2px);
+  box-shadow: 0 1px 0 var(--accent-dark);
+}
+
+/* No celular o painel encosta um pouquinho mais nas bordas */
+@media (max-width: 480px) {
+  .chat {
+    left: 14px;
+    bottom: 14px;
+  }
+  .chat-panel {
+    width: calc(100vw - 28px);
+  }
+}
+
 /* ===== AVISO (toast) ===== */
 .toast {
   position: fixed;
