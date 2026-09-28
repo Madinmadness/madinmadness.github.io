@@ -40,6 +40,9 @@ const textos = {
     "p4.title": "This Portfolio",
     "p4.desc": "Built with HTML, CSS and JavaScript, responsive, in 3 languages, with dark mode and a security policy (CSP).",
     "p4.link": "View code →",
+    "p5.title": "FAQ Chat Bot",
+    "p5.desc": "A cute little assistant on this site that answers questions about me. Built in vanilla JavaScript, no external AI, in 3 languages and privacy-friendly.",
+    "p5.link": "Talk to it →",
     "exp.title": "Experience &amp; Education",
     "exp.1.period": "Since 2025",
     "exp.1.title": "Freelance Cybersecurity Professional",
@@ -98,6 +101,9 @@ const textos = {
     "p4.title": "Este Portfólio",
     "p4.desc": "Feito com HTML, CSS e JavaScript, responsivo, em 3 idiomas, com modo escuro e política de segurança (CSP).",
     "p4.link": "Ver código →",
+    "p5.title": "Chatbot de Perguntas",
+    "p5.desc": "Um assistente fofo aqui no site que responde dúvidas sobre mim. Feito em JavaScript puro, sem IA externa, nos 3 idiomas e sem coletar dados.",
+    "p5.link": "Conversar com ele →",
     "exp.title": "Experiência &amp; Formação",
     "exp.1.period": "Desde 2025",
     "exp.1.title": "Profissional Autônoma de Cibersegurança",
@@ -156,6 +162,9 @@ const textos = {
     "p4.title": "Este Portafolio",
     "p4.desc": "Hecho con HTML, CSS y JavaScript, responsive, en 3 idiomas, con modo oscuro y política de seguridad (CSP).",
     "p4.link": "Ver código →",
+    "p5.title": "Chatbot de Preguntas",
+    "p5.desc": "Un asistente lindo aquí en el sitio que responde dudas sobre mí. Hecho en JavaScript puro, sin IA externa, en 3 idiomas y sin recopilar datos.",
+    "p5.link": "Hablar con él →",
     "exp.title": "Experiencia &amp; Formación",
     "exp.1.period": "Desde 2025",
     "exp.1.title": "Profesional Independiente de Ciberseguridad",
@@ -787,6 +796,15 @@ window.atualizarChatIdioma = function () {
 
 chatToggle.addEventListener("click", () => chatAbrir(chatPanel.hidden));
 chatClose.addEventListener("click", () => chatAbrir(false));
+
+// O link "conversar com ele" lá no card de Projetos abre o chat
+const tryBot = document.getElementById("try-bot");
+if (tryBot) {
+  tryBot.addEventListener("click", (e) => {
+    e.preventDefault();
+    chatAbrir(true);
+  });
+}
 
 chatForm.addEventListener("submit", (e) => {
   e.preventDefault(); // nunca envia pra lugar nenhum: tudo acontece aqui no navegador
