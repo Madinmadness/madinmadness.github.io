@@ -25,7 +25,9 @@
   <!-- as fontes principais já começam a baixar junto com a página -->
   <link rel="preload" href="fonts/fredoka-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="fonts/nunito-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="style.css">
+  <!-- o "?v=" força os navegadores a baixar a versão nova quando o arquivo muda.
+       Ao mexer no CSS ou no JS, suba o número (v=2 -> v=3) e republique. -->
+  <link rel="stylesheet" href="style.css?v=2">
 </head>
 <body>
 
@@ -276,6 +278,6 @@
     </div>
   </div>
 
-  <script src="script.js"></script>
+  <script src="script.js?v=2"></script>
 </body>
 </html>
